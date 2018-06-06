@@ -1,1 +1,1 @@
-Run with `node server.js`
+Run with `npm run dev`
