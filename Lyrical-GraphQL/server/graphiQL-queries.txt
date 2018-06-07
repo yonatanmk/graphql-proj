@@ -1,0 +1,26 @@
+# {
+#   songs {
+#     id,
+#     title,
+#     lyrics {
+#       content
+#     }
+#   }
+# }
+
+# mutation {
+#   addSong(title: "Cold Night") {
+#     id,
+#     title
+#   }
+# }
+
+# mutation {
+#   addLyricToSong(songId: "5b19b7e59e3b1b652b1d3155", content: "It's a Cooooold Night") {
+#     id,
+#     title,
+#     lyrics {
+#       content
+#     }
+#   }
+# }
