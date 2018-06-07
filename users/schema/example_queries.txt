@@ -1,0 +1,46 @@
+# {
+#   user(id: "40") {
+#     id,
+#     firstName,
+#     age,
+#     company {
+#       name,
+#     }
+#   },
+#   company(id: "2") {
+#     id,
+#     name,
+#     users {
+#       firstName
+#     }
+#   }
+# }
+
+# {
+#   company(id: "2") {
+#     id,
+#     name,
+#     users {
+#     	firstName
+#   	}
+#   }
+# }
+
+# mutation {
+#   addUser(firstName: "Stephen") {
+#     id
+#   }
+# }
+
+# mutation {
+# 	deleteUser(id: "H1p4AgPe7") {
+#     id
+#   }
+# }
+
+mutation {
+  editUser(id: "H1IAWWwxm", firstName: "Yonatan") {
+    id,
+    firstName
+  }
+}
