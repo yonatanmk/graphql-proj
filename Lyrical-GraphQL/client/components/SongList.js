@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 import { Link } from 'react-router';
+import { compose } from "recompose";
 import query from '../queries/fetchSongs';
 
 class SongList extends Component {
@@ -55,6 +56,11 @@ const mutation = gql`
   }
 `;
 
-export default graphql(mutation)(
-  graphql(query)(SongList)
-);
+export default compose(
+  graphql(mutation),
+  graphql(query)
+)(SongList)
+
+// export default graphql(mutation)(
+//   graphql(query)(SongList)
+// );
